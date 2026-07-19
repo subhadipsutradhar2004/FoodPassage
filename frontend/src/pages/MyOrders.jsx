@@ -39,7 +39,7 @@ return ()=>{
 
         <div className='flex items-center gap-[20px] mb-6 '>
           <div className=' z-[10] ' onClick={() => navigate("/")}>
-            <IoIosArrowRoundBack size={35} className='text-[#ff4d2d]' />
+            <IoIosArrowRoundBack size={35} className='text-[#ff9900]' />
           </div>
           <h1 className='text-2xl font-bold  text-start'>My Orders</h1>
         </div>

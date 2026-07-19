@@ -12,8 +12,8 @@ import { ClipLoader } from 'react-spinners';
 import { useDispatch } from 'react-redux';
 import { setUserData } from '../redux/userSlice';
 function SignIn() {
-    const primaryColor = "#ff4d2d";
-    const hoverColor = "#e64323";
+    const primaryColor = "#ff9900";
+    const hoverColor = "#ff9100";
     const bgColor = "#fff9f6";
     const borderColor = "#ddd";
     const [showPassword, setShowPassword] = useState(false)
@@ -54,7 +54,7 @@ function SignIn() {
             <div className={`bg-white rounded-xl shadow-lg w-full max-w-md p-8 border-[1px] `} style={{
                 border: `1px solid ${borderColor}`
             }}>
-                <h1 className={`text-3xl font-bold mb-2 `} style={{ color: primaryColor }}>Vingo</h1>
+                <h1 className={`text-3xl font-bold mb-2 `} style={{ color: primaryColor }}>FoodPassage</h1>
                 <p className='text-gray-600 mb-8'> Sign In to your account to get started with delicious food deliveries
                 </p>
 
@@ -75,12 +75,12 @@ function SignIn() {
                         <button className='absolute right-3 cursor-pointer top-[14px] text-gray-500' onClick={() => setShowPassword(prev => !prev)}>{!showPassword ? <FaRegEye /> : <FaRegEyeSlash />}</button>
                     </div>
                 </div>
-                <div className='text-right mb-4 cursor-pointer text-[#ff4d2d] font-medium' onClick={()=>navigate("/forgot-password")}>
+                <div className='text-right mb-4 cursor-pointer text-[#ff9900] font-medium' onClick={()=>navigate("/forgot-password")}>
                   Forgot Password
                 </div>
               
 
-            <button className={`w-full font-semibold py-2 rounded-lg transition duration-200 bg-[#ff4d2d] text-white hover:bg-[#e64323] cursor-pointer`} onClick={handleSignIn} disabled={loading}>
+            <button className={`w-full font-semibold py-2 rounded-lg transition duration-200 bg-[#ff9900] text-white hover:bg-[#ff9100] cursor-pointer`} onClick={handleSignIn} disabled={loading}>
                 {loading?<ClipLoader size={20} color='white'/>:"Sign In"}
             </button>
       {err && <p className='text-red-500 text-center my-[10px]'>*{err}</p>}
@@ -89,7 +89,7 @@ function SignIn() {
 <FcGoogle size={20}/>
 <span>Sign In with Google</span>
             </button>
-            <p className='text-center mt-6 cursor-pointer' onClick={()=>navigate("/signup")}>Want to create a new account ?  <span className='text-[#ff4d2d]'>Sign Up</span></p>
+            <p className='text-center mt-6 cursor-pointer' onClick={()=>navigate("/signup")}>Want to create a new account ?  <span className='text-[#ff9900]'>Sign Up</span></p>
             </div>
         </div>
     )
